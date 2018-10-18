@@ -1,47 +1,90 @@
-
-function changeBoxColors(color) {
-  console.log('Selected color: ' + color);
-  // TODO: Look at styles.css and choose a class
-  // to apply to all of the box elements in order
-  // to change their background color
-  // possible values of color are: 'red', 'blue', 'yellow'
-  // (consider using a switch statement!)
+function changeBoxColors(color){
+//     switch('color'){
+// case "red":
+//     redBox = document.querySelector('#boxes'), i=redBox.length;
+//     while(i--)
+//     redBox.style.backgroundColor ="red";
+//     console.log('red click');
+//     break;
+// case "blue":
+// var blue = document.querySelector('#boxes').style.backgroundColor = 'blue';
+//     break;
+// case "yellow":
+// var yellow = document.querySelector('#boxes').style.backgroundColor = 'yellow';
+//     break;
+// }
+// }
+var red = document.getElementsByClassName("box");
+//     while (i--) {
+//         boxes[i].style.color = "red";
+//         }
+// var color = red;
+//     changeBoxColors(red);
+//     console.log('clicked');
+for (var i = 0; i < red.length; i++ ){
+    red[i].style.backgroundColor = red;
 }
+}
+// function changeBoxColors(color) {
+// switch(color) {
+// case "red":
+//     document.getElementById('boxes').style.backgroundColor = "red";
+//     break;
+// case "blue":
+// document.getElementById('boxes').style.backgroundColor = "blue";
+//     break;
+// case "yellow":
+// document.getElementById('boxes').style.backgroundColor = "yellow";
+//     }
+// default "gray":
+//     document.getElementsByClassName('box').style.backgroundColor = "gray";
+// changeBoxColors();
+// }
+
+//   console.log('Selected color: ' + color);
+
+
+//   // TODO: Look at styles.css and choose a class
+//   // to apply to all of the box elements in order
+//   // to change their background color
+//   // possible values of color are: 'red', 'blue', 'yellow'
+//   // (consider using a switch statement!)
+// }
+//
+//
 
 function addBox() {
-  console.log('Adding a new box');
-  // TODO: Add a new div with class="box" to
-  // the boxes section of the dom tree
+  //console.log('This will eventually add a new box, but for now, this message will suffice.');
+  var boxList = document.querySelector('#boxes');
+var newBox = document.createElement("div");
+newBox.setAttribute('class', 'box gray');
+boxList.appendChild(newBox);
+console.log('And another one!');
 
-  var newBoxElement = null; // replace with your code
-  // This line is needed to make sure that new boxes
-  // handle clicks. Make sure thatnewBoxElement refers
-  // to the DOM node containing your new Div.
-  newBoxElement.addEventListener('click', handleBoxClick);
 }
 
-var selectedBoxes = [];
+//
+
+
 function removeSelectedBoxes() {
-  console.log('Removing selected boxes');
-  // TODO: look at the selectedBoxes array and remove each of those
-  // from their parent in the DOM tree (their parent is the div with id="boxes").
-  // Think about what happens to the selectedBoxes array when you're done!
+var boxList = document.querySelector('#boxes');
+var firstBox = boxList.firstElementChild;
+boxList.removeChild(firstBox);
+console.log('bye Boxy!');
+
 }
 
-/* Event Handlers */
-function handleBoxClick(event) {
-  var boxElement = event.target;
-  console.log('Selecting box: ', boxElement);
-  // TODO: add or remove the box from the array of selectedBoxes
-  // TODO: looke at styles.css and choose a class (or multiple classes)
-  // to apply in order to add a border around selected boxes or
-  // remove a border from deselected boxes
-}
 
+//   // TODO: looke at styles.css and choose a class (or multiple classes)
+//   // to apply in order to add a border around selected boxes or
+//   // remove a border from deselected boxes
+// }
+//
 function handleColorSelect(event) {
+
   changeBoxColors(event.target.id);
 }
-
+//
 function attachListeners() {
   document.querySelectorAll('.box').forEach(function(box){
     box.addEventListener('click', handleBoxClick);

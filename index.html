@@ -1,41 +1,41 @@
 <html>
   <head>
-    <script src="js/domManipulation.js"></script>
     <link rel="stylesheet" href="css/styles.css">
-  </head>
+      </head>
   <body>
+      <script src="js/domManipulation.js"></script>
     <div class="container">
       <div id="actions" class="section">
         <div class="task">
           1. Clicking a color should change the color of all boxes:
           <div class="colors">
-            <div id="red" class="red color-selector"></div>
-            <div id="blue" class="blue color-selector"></div>
-            <div id="yellow" class="yellow color-selector"></div>
+            <div><button id="redButton" onclick="changeBoxColors()" class="red color-selector"></button></div>
+            <div><button id="blueButton" onclick="changeBoxColors()" class="blue color-selector"></button></div>
+            <div><button id="yellowButton" onclick="changeBoxColors()" class="yellow color-selector"></button></div>
           </div>
         </div>
         <div class="task">
           2. Clicking this button should add a new box:
-          <div><button id="addButton">Add Box</button></div>
+          <div><button onclick="addBox()" id="addButton">Add Box</button></div>
         </div>
         <div class="task">
           3. Clicking on a box should highlight it with an outline.
         </div>
         <div class="task">
           4. Clicking this button should remove selected boxes:
-          <div><button id="removeButton">Remove Boxes</button></div>
+          <div><button onclick="removeSelectedBoxes()" id="removeButton">Remove Boxes</button></div>
         </div>
       </div>
       <div id="boxes" class="section">
         <div class="box box-selected"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
-        <div class="box"></div>
+        <div id="box1" class="box gray"></div>
+        <div id="box2" class="box gray"></div>
+        <div id="box3" class="box gray"></div>
+        <div id="box4" class="box gray"></div>
+        <div id="box5" class="box gray"></div>
+        <div id="box6" class="box gray"></div>
+        <div id="box7"  class="box gray"></div>
+        <div id="box8"  class="box gray"></div>
       </div>
     </div>
   </body>

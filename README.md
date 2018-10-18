@@ -1,6 +1,6 @@
-This is a simple exercise for practicing adding, removing, and manipulating elements in the DOM. There are four tasks to complete, as you will see in index.html. Check out domManipulation.js and look for the TODO comments for where you need to add code! You shouldn't need to edit HTML or CSS, but as always, you're free to make changes. I recommend taking a look at the CSS to see how the layout of the page is accomplished.
+This is a simple exercise for practicing adding, removing, and maßnipulating elements in the DOM. There are four tasks to complete, as you will see in index.html. Check out domManipulation.js and look for the TODO comments for where you need to add code! You shouldn't need to edit HTML or CSS, but as always, you're free to make changes. I recommend taking a look at the CSS to see how the layout of the page is accomplished.
 
-1. (5 points) Apply a color to all boxes by click one one of the colors in task 1.
+1. (5 points) Apply a color to all boxes by click on one of the colors in task 1.
 2. (5 points) Add a new gray box to the end of the boxes display.
 3. (5 points) Add ability to 'select' boxes. Selected boxes should have a border.
 4. (5 points) Clicking 'Remove Boxes' should remove all selected boxes from the DOM.
